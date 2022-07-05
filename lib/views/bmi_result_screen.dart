@@ -1,3 +1,4 @@
+import 'package:bmi/constant/constant.dart';
 import 'package:bmi/helpers/bmi_calculator.dart';
 import 'package:bmi/views/bmi_data_screen.dart';
 import 'package:flutter/material.dart';
@@ -16,19 +17,31 @@ class BmiResultScreen extends StatelessWidget {
     // final bmiDesc =
     bmiCalculator.getHealthRiskDesc();
     return Scaffold(
+      // backgroundColor: backgroundColor,
       appBar: AppBar(
-        title: const Text("Hasil Hitung BMI"),
+        centerTitle: true,
+        leading: const BackButton(
+          color: primaryColor,
+        ),
+        // backgroundColor: tertiaryColor,
+        title: const Text(
+          "BMI Calculator",
+          style: TextStyle(
+            color: tertiaryColor,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: Column(
         children: [
           const Expanded(
             child: Center(
               child: Text(
-                "Hasil Perhitungan",
+                "Result",
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: primaryColor,
                 ),
               ),
             ),
@@ -47,7 +60,7 @@ class BmiResultScreen extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: secondaryColor,
                       ),
                     ),
                     Text(
@@ -55,7 +68,7 @@ class BmiResultScreen extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 100,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: primaryColor,
                       ),
                     ),
                     Text(
@@ -63,7 +76,7 @@ class BmiResultScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 15,
-                        color: Colors.white,
+                        color: secondaryColor,
                       ),
                     ),
                   ],
@@ -76,15 +89,20 @@ class BmiResultScreen extends StatelessWidget {
               Navigator.pop(context);
             },
             child: Container(
-              height: 80,
-              color: const Color(0xffEC3C66),
+              height: 60,
+              width: 240,
+              margin: const EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: primaryColor,
+              ),
               child: const Center(
                   child: Text(
-                "HITUNG ULANG",
+                "RECALCULATE",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: tertiaryColor,
                 ),
               )),
             ),

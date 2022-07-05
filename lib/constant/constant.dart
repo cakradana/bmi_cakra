@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
-const Color primaryColor = Color(0xff0A0E21);
+const Color backgroundColor = Color(0xfff8f8f8);
+const Color primaryColor = Color(0xffFF1801);
+const Color secondaryColor = Color(0xff15151d);
+const Color tertiaryColor = Color(0xffffffff);
+
 TextStyle? labelTextStyle = const TextStyle(
-  fontSize: 18,
-  color: Colors.white, //Color(0xff8d8e98),
+  fontSize: 13,
+  fontWeight: FontWeight.bold,
+  color: secondaryColor, //Color(0xff8d8e98),
 );
 TextStyle numberTextStyle = const TextStyle(
   fontSize: 50,
   fontWeight: FontWeight.bold,
-  color: Colors.white,
+  color: primaryColor,
 );
 
 const String underweightSevere = "Underweight (Severe thinness)";
