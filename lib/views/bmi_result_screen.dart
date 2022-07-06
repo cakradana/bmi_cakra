@@ -17,21 +17,7 @@ class BmiResultScreen extends StatelessWidget {
     // final bmiDesc =
     bmiCalculator.getHealthRiskDesc();
     return Scaffold(
-      // backgroundColor: backgroundColor,
-      appBar: AppBar(
-        centerTitle: true,
-        leading: const BackButton(
-          color: primaryColor,
-        ),
-        // backgroundColor: tertiaryColor,
-        title: const Text(
-          "BMI Calculator",
-          style: TextStyle(
-            color: tertiaryColor,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      appBar: appBar,
       body: Column(
         children: [
           const Expanded(

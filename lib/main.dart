@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'Formula1',
           appBarTheme: const AppBarTheme(
-            backgroundColor: primaryColor,
+            backgroundColor: secondaryColor,
           ),
           // This is the theme of your application.
           //
